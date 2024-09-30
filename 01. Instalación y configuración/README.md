@@ -1,6 +1,4 @@
-# Creando nuestra primera prueba
-
-En esa sección la idea es poder crear una primera prueba basica comenzando desde un proyecto desde cero.
+# Instalación y configuración
 
 Para esto es necesario tener instalado y configurado el entorno con los requerimientos.
 
