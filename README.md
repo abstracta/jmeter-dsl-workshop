@@ -9,3 +9,12 @@ Está dividido en cuatro secciones:
 4. **Featrues adicionales**. Donde veremos otras funcionalidades que nos permitirán aprovechar al máximo el potencial de JMeterDSL.
 
 Cada sección está organizada en un directorio distinto del repositorio y dentro de cada uno de ellos se encuentran las instrucciones para llevar a cabo la tarea y la solución para tener como referencia.
+
+## Links de utilidad
+* [Guía de usuario de JMeterDSL](https://abstracta.github.io/jmeter-java-dsl/guide/)
+
+* [Repositorio de Github de JMeterDSL](https://github.com/abstracta/jmeter-java-dsl)
+
+* [Proyecto de ejemplo/template](https://github.com/abstracta/jmeter-java-dsl-sample)
+
+* [Servidor de Discord de JMeterDSL](https://discord.gg/WNSn5hqmSd)
