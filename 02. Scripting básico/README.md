@@ -1,35 +1,24 @@
-# Creando nuestra primera prueba
+# Creando una prueba básica
 
-En esa sección vamos a crear una prueba básica, debuggear y ejecutar.
+Vamos a crear una prueba que ejecute un pedido al sitio [PetStore](https://petstore.octoperf.com/) de [Octoperf](https://octoperf.com/).
 
-Para comenzar con el taller, partiremos desde el proyecto que encontramos en la carpeta [proyecto_base] (agregar_link) y es importante tener instalado y configurado el entorno con los pre-requisitos.
+Además agregaremos un criterio de pass/fail para validar si la ejecución del test cumple los criterios de aceptación requeridos.
 
-## ¿Que va a tener nuestra prueba?
-
-Lo basico para poder ejecutar:
-
-* Testplan
-* Threadgroup
-* Pedidos
+El script `scriptBasico.java` muestra una posible solución para que tengan como referencia.
 
 # Debugging
 
-En esta sección nos enfocaremos en debuggear nuestro script para situaciones mas complejas. Veremos 3 metodos para debagguear.
+Veremos tres métodos distintos de debugging.
 
-## View results tree
+## Results Tree Visualizer
 
-Esto mostrará el elemento incorporado de JMeter "ViewResultsTree", el cual te permite revisar el contenido de las solicitudes y respuestas, además de las métricas recopiladas (tiempo empleado, bytes enviados y recibidos, etc.) para cada solicitud enviada al servidor.
+Al utilizar este método durante la ejecución del script, JMeterDSL muestra una ventana similar al elemento *View Results Tree* de JMeter.
 
-Revisar la documentación: https://abstracta.github.io/jmeter-java-dsl/guide/#view-results-tree
+## Método ShowInGui()
 
-## metodo ShowInGui
-
-Esto nos permite ver el mismo script en JMeter y ver los elementos de nuestra prueba mediante la GUI, bastante útil si ya se cuenta con experiencia automatizando en JMeter.
-
-Documentación: https://abstracta.github.io/jmeter-java-dsl/guide/#test-plan-review-in-jmeter-gui
+Permite ver el mismo script que estamos desarrollando pero en la interfaz de JMeter, también podemos interactuar con el script desde dicha interfaz. Es útil sobre todo si ya se cuenta con experiencia automatizando en JMeter.
 
 ## Breakpoint
 
-Nos permite ver información en un cierto estado de la prueba. en algunos casos necesitamos ademas agregar un postProcesor para obtener mas información de la prueba en dicho estado.
-
-Documentación: https://abstracta.github.io/jmeter-java-dsl/guide/#debug-jmeter-code
+Tal vez el método de debugging más avanzado, sobre todo si no se tiene experiencia desarrollando, pero muy útil sobre todo para scripts complejos. Permite ver el estado de las variables en cierto momento de la ejecución.
+Más información sobre este método en [este link](https://abstracta.github.io/jmeter-java-dsl/guide/#debug-jmeter-code).

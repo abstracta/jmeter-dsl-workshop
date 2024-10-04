@@ -8,12 +8,11 @@ Siempre es recomendable utilizar las últimas versiones de dichas herramientas. 
 
 * Java 11+
 * Maven 3.9
-* (Opcional) IDE. Ej: IntelliJ IDEA 2022.31 (Community Edition)  
-<br>
+* (Opcional) IDE. Ej: IntelliJ IDEA 2022.31 (Community Edition)
 
 Vamos a utilizar JUnit como librería de testing y AssertJ para las validaciones. Ambas en su última versión.
 
-El archivo pom.xml de este directorio muestra la configuración necesaria para instalar y configurar estas librerías y JMeterDSL.
+El archivo `pom.xml` de este directorio muestra la configuración necesaria para instalar y configurar estas librerías y JMeterDSL.
 
 >*Tip: A efectos de este workshop vamos a crear un proyecto desde cero, pero si cuentas con un repositorio con el código de la aplicación o sistema que quieres probar es recomendable que integres JMeterDSL a ese repositorio.*
 
