@@ -16,7 +16,6 @@ A medida que nuestra prueba va adquiriendo mas complejidad, es recomendable segu
 En particular alguinas buenas practicas son:
 
 * Incluir Assertions/Validaciones
-* Criterios de pass/fail
 * Parametrización
 * Modularización
 * Transactions controllers
