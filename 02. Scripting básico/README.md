@@ -1,6 +1,6 @@
 # Creando nuestra primera prueba
 
-En esa sección la idea es poder crear nuestra primera prueba basica, debugear y ejecutar.
+En esa sección vamos a crear una prueba básica, debuggear y ejecutar.
 
 Para comenzar con el taller, partiremos desde el proyecto que encontramos en la carpeta [proyecto_base] (agregar_link) y es importante tener instalado y configurado el entorno con los pre-requisitos.
 
