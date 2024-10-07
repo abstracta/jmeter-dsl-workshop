@@ -1,5 +1,6 @@
 import org.apache.http.entity.ContentType;
 import org.junit.jupiter.api.Test;
+import us.abstracta.jmeter.javadsl.blazemeter.BlazeMeterEngine;
 import us.abstracta.jmeter.javadsl.http.DslHttpSampler;
 
 import java.io.IOException;
@@ -9,15 +10,17 @@ import java.time.Duration;
 import static us.abstracta.jmeter.javadsl.JmeterDsl.*;
 import static us.abstracta.jmeter.javadsl.core.listeners.AutoStopListener.AutoStopCondition.errors;
 
-public class PruebaPerformance_buenasPracticas {
+public class PruebaPerformance_modeladoYNube {
     String host = "https://petstore.octoperf.com";
 
     @Test
-    public void performanceTest() throws IOException{
-        testPlan(
+    public void performanceTest() throws Exception{
+         testPlan(
                 httpDefaults().encoding(StandardCharsets.UTF_8),
                 csvDataSet(testResource("usuarios.csv")),
-                threadGroup(1,4,
+                threadGroup().rampTo(10,Duration.ofSeconds(5))
+                        .children(pedido("prueba","Sign In")),
+                threadGroup(1,Duration.ofSeconds(10),
                         transaction("Página principal y Login",
                                 pedido("prueba","Sign In"),
                                 pedidoPostLogin(),
@@ -30,8 +33,19 @@ public class PruebaPerformance_buenasPracticas {
                                 threadPause(Duration.ofMillis(1500))
                                 )
                         ),
+                rpsThreadGroup().maxThreads(10).children(pedido("prueba","Sign In")),
+
                 resultsTreeVisualizer()
-        ).run();
+                //jtlWriter(".","success.jtl"),
+                //jtlWriter(".","errors.jtl").withAllFields(),
+                //run() para ejecutar en local.
+                //showTimeLine() para visualizar el comportamiento de los diferentes threads.
+        ).runIn(new BlazeMeterEngine(System.getenv("bzt_token"))
+                .testName("pruebaPerformance")
+                .totalUsers(10)
+                .holdFor(Duration.ofMinutes(10))
+                .threadsPerEngine(5)
+                .testTimeout(Duration.ofMinutes(20)));
     }
 
     DslHttpSampler pedido(String url, String assertion){
