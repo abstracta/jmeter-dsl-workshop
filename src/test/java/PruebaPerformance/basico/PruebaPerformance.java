@@ -1,3 +1,5 @@
+package PruebaPerformance_basico;
+
 import org.junit.jupiter.api.Test;
 import us.abstracta.jmeter.javadsl.core.TestPlanStats;
 
@@ -14,10 +16,9 @@ public class PruebaPerformance {
         TestPlanStats stats = testPlan(
                 threadGroup(1,1,
                         httpSampler("https://petstore.octoperf.com")
-                                .children(jsr223PostProcessor(c -> c.prevMap()))
-                        )
+                )
                 //,resultsTreeVisualizer()
-        ).run(); //showInGui() nos permite ver la prueba mediante la interfaz grafica de JMeter
+        ).run(); //showInGui() para ver la prueba mediante la interfaz grafica de JMeter
         assertThat(stats.overall().sampleTimePercentile99()).isLessThan(Duration.ofMillis(10));
     }
 }

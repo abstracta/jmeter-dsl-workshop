@@ -9,7 +9,7 @@ import java.time.Duration;
 import static us.abstracta.jmeter.javadsl.JmeterDsl.*;
 import static us.abstracta.jmeter.javadsl.core.listeners.AutoStopListener.AutoStopCondition.errors;
 
-public class PruebaPerformance_buenasPracticas {
+public class BuenasPracticas {
     String host = "https://petstore.octoperf.com";
 
     @Test
@@ -26,8 +26,7 @@ public class PruebaPerformance_buenasPracticas {
                                 constantTimer(Duration.ofMillis(1500))
                                 ),
                         transaction("Selección de mascota",
-                                pedido(host + "/actions/Catalog.action?viewCategory=&categoryId=${mascota}","Product ID"),
-                                threadPause(Duration.ofMillis(1500))
+                                pedido(host + "/actions/Catalog.action?viewCategory=&categoryId=${mascota}","Product ID")
                                 )
                         ),
                 resultsTreeVisualizer()

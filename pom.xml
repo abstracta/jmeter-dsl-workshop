@@ -27,6 +27,18 @@
             <version>3.24.2</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>us.abstracta.jmeter</groupId>
+            <artifactId>jmeter-java-dsl-octoperf</artifactId>
+            <version>1.29</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>us.abstracta.jmeter</groupId>
+            <artifactId>jmeter-java-dsl-dashboard</artifactId>
+            <version>1.29</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <properties>

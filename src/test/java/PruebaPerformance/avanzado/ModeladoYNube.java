@@ -1,7 +1,7 @@
 import org.apache.http.entity.ContentType;
 import org.junit.jupiter.api.Test;
-import us.abstracta.jmeter.javadsl.blazemeter.BlazeMeterEngine;
 import us.abstracta.jmeter.javadsl.http.DslHttpSampler;
+import us.abstracta.jmeter.javadsl.octoperf.OctoPerfEngine;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -10,7 +10,7 @@ import java.time.Duration;
 import static us.abstracta.jmeter.javadsl.JmeterDsl.*;
 import static us.abstracta.jmeter.javadsl.core.listeners.AutoStopListener.AutoStopCondition.errors;
 
-public class PruebaPerformance_modeladoYNube {
+public class ModeladoYNube {
     String host = "https://petstore.octoperf.com";
 
     @Test
@@ -29,8 +29,7 @@ public class PruebaPerformance_modeladoYNube {
                                 constantTimer(Duration.ofMillis(1500))
                                 ),
                         transaction("Selección de mascota",
-                                pedido(host + "/actions/Catalog.action?viewCategory=&categoryId=${mascota}","Product ID"),
-                                threadPause(Duration.ofMillis(1500))
+                                pedido(host + "/actions/Catalog.action?viewCategory=&categoryId=${mascota}","Product ID")
                                 )
                         ),
                 rpsThreadGroup().maxThreads(10).children(pedido("prueba","Sign In")),
@@ -40,12 +39,11 @@ public class PruebaPerformance_modeladoYNube {
                 //jtlWriter(".","errors.jtl").withAllFields(),
                 //run() para ejecutar en local.
                 //showTimeLine() para visualizar el comportamiento de los diferentes threads.
-        ).runIn(new BlazeMeterEngine(System.getenv("bzt_token"))
-                .testName("pruebaPerformance")
+        ).runIn(new OctoPerfEngine(System.getenv("bzt_token"))
+                .projectName("PruebaPerformance_modeladoYNube")
                 .totalUsers(10)
-                .holdFor(Duration.ofMinutes(10))
-                .threadsPerEngine(5)
-                .testTimeout(Duration.ofMinutes(20)));
+                .rampUpFor(Duration.ofMinutes(1))
+                .holdFor(Duration.ofMinutes(10)));
     }
 
     DslHttpSampler pedido(String url, String assertion){
