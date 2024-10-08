@@ -1,6 +1,6 @@
 # Creando una prueba básica
 
-Vamos a crear una prueba que ejecute un pedido al sitio [PetStore](https://petstore.octoperf.com/) de [Octoperf](https://octoperf.com/).
+Vamos a crear una prueba que ejecute un pedido a la página principal del sitio [PetStore](https://petstore.octoperf.com/) de [Octoperf](https://octoperf.com/).
 
 Además agregaremos un criterio de pass/fail para validar si la ejecución del test cumple los criterios de aceptación requeridos.
 
@@ -16,4 +16,4 @@ Al utilizar este método durante la ejecución del script, JMeterDSL muestra una
 
 ## ShowInGui()
 
-Permite ver el mismo script que estamos desarrollando pero en la interfaz de JMeter, también podemos interactuar con el script desde dicha interfaz. Es útil sobre todo si ya se cuenta con experiencia automatizando en JMeter.
+Permite ver el mismo script que estamos desarrollando pero en la interfaz de usuario de JMeter. También podemos interactuar con el script desde dicha interfaz. Es útil sobre todo si ya se cuenta con experiencia automatizando en JMeter.

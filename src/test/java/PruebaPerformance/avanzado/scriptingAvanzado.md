@@ -19,18 +19,18 @@ Vamos a ver ahora algunas buenas prácticas recomendadas para facilitar el manej
 * HTTP Request Defaults.
 * Buenas prácticas de Java (variables, modularización a nivel de código, etc.).
 * Variables y Propiedades de JMeter.
-* Autostop
-* jtlWriter
+* Autostop.
+* Uso del jtlWriter.
 
 El script [`BuenasPracticas.java`](./BuenasPracticas.java) contiene una posible solución de esta sección para tomar como referencia.
 
 # Configuración de escenarios y ejecución
 
-Aparte de la creación del script es necesario entender como JMeterDSL nos ayuda a configurar de forma mas sencilla los diferentes escenarios y como podemos ejecutar las pruebas en la nube.
+En esta sección veremos algunas de las opciones que presenta JMeterDSL para configurar escenarios de carga y ejecutar. Entre otras cosas vamos a ver:
 
-* Diferentes ThreadGroups
-* RPS ThreadGroups
-* ShowTimeLine element
-* Escalado en la nube (runIn)
+* ThreadGroups, Ramps y Holds.
+* Configuración según RPS.
+* ShowTimeLine.
+* Escalado en la nube.
 
 El script [`ModeladoYNube.java`](./ModeladoYNube.java) contiene una posible solución de esta sección para tomar como referencia.

@@ -1,6 +1,6 @@
 # Instalación y configuración
 
-En este workshop vamos a usar la versión Java de JMeterDSL y Maven para hacer el build. Por lo tanto, los requerimientos previos van a ser tener instalado estas dos herramientas. 
+Vamos a usar la versión Java de JMeterDSL y Maven para hacer el build. Por lo tanto, los requerimientos previos van a ser tener instalado Java y Maven.
 
 Además vamos a usar IntelliJ como IDE. Utilizar un IDE tiene varias ventajas, pero no es un requerimiento obligatorio.
 

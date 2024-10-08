@@ -8,7 +8,7 @@ Está dividido en cuatro secciones:
 3. **[Scripting avanzado](./src/test/java/PruebaPerformance/avanzado/scriptingAvanzado.md)**. Donde veremos funcionalidades que permitirán resolver aspectos más complejos, necesarios para algunas pruebas de performance.
 4. **[Featrues adicionales](./src/test/java/PruebaPerformance/avanzado/featuresAdicionales.md)**. Donde veremos otras funcionalidades que nos permitirán aprovechar al máximo el potencial de JMeterDSL.
 
-Cada sección está organizada en un directorio distinto del repositorio y dentro de cada uno de ellos se encuentran las instrucciones para llevar a cabo la tarea y la solución para tener como referencia.
+Cada sección está organizada en un directorio distinto del repositorio y dentro de cada uno de ellos se encuentra un archivo  las instrucciones para llevar a cabo la tarea y una posible solución para tener como referencia.
 
 ## Links de utilidad
 * [Guía de usuario de JMeterDSL](https://abstracta.github.io/jmeter-java-dsl/guide/)
