@@ -1,27 +1,27 @@
 # Scripting avanzado
 
-Vamos a introducirnos en algunos conceptos mas complejos:
+En esta sección vamos a ver algunos conceptos y funcionalidades un poco más complejas, que nos van a ayudar a automatizar casos de prueba más realistas. En particular vamos a ver:
 
-* Diferentes maneras de agregar un pedido POST
-* Agregar headers
-* Descargar el contenido estatico
-* Parametrizar variables (extractores)
-* Agregar Timers
-* Uso de datos externos (csvDataSet)
+* Cómo agregar pedidos POST y headers.
+* Manejo del contenido estatico.
+* Parametrización y correlación de variables.
+* Cómo agregar tiempos de espera.
+* Uso de datos externos desde un archivo CSV.
 
-# Buenas Practicas
+El script `PruebaPerformance_scriptingAvanzado.java` contiene una solución de referencia sobre esta sección.
 
-A medida que nuestra prueba va adquiriendo mas complejidad, es recomendable seguir ciertos buenas practicas para facilitar y mejorar nuestras pruebas tanto a la hora de crearlas como al momento de ejecutar.
+## Buenas Practicas
 
-En particular alguinas buenas practicas son:
+Vamos a ver ahora algunas buenas prácticas recomendadas para facilitar el manejo y el entendimiento de los scripts de JMeterDSL, así como para optimizar su ejecución. En particular:
 
-* Incluir Assertions/Validaciones
-* Parametrización
-* Modularización
-* Transactions controllers
-* HTTP Request Default
-* Dashbord (vizualuzar el comportamiento de la prueba previo a las ejecuciones)
+* Incluir validaciones (assertions).
+* Transaction Controllers.
+* HTTP Request Defaults.
+* Buenas prácticas de Java (variables, modularización a nivel de código, etc.).
+* Variables y Propiedades de JMeter.
 * Autostop
+
+El script `PruebaPerformance_buenasPracticas.java` contiene una posible solución de esta sección para tomar como referencia.
 
 # Configuración de escenarios y ejecución
 
