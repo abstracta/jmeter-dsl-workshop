@@ -5,22 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc31e1fd-a9bb-4fe1-b9ad-f893068b2cc8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01. Instalación y configuración/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PruebaPerformance/basico/InstalaciónConfiguración.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01. Instalación y configuración/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/02. Scripting básico/PruebaPerformance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PruebaPerformance/basico/PruebaPerformance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02. Scripting básico/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PruebaPerformance/basico/pruebaBásica.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03. Scripting avanzado/PruebaPerformance_buenasPracticas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PruebaPerformance/avanzado/BuenasPracticas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03. Scripting avanzado/PruebaPerformance_modeladoYNube.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PruebaPerformance/avanzado/ModeladoYNube.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03. Scripting avanzado/PruebaPerformance_scriptingAvanzado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PruebaPerformance/avanzado/ScriptingAvanzado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03. Scripting avanzado/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PruebaPerformance/avanzado/ScriptingAvanzado.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03. Scripting avanzado/usuarios.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/usuarios.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04. Features adicionales/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PruebaPerformance/avanzado/featuresAdicionales.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +54,7 @@
       <recent name="$PROJECT_DIR$/src/test/PruebaPerformance_basico" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/test/resources" />
       <recent name="$PROJECT_DIR$/src/test/java/PruebaPerformance_avanzado" />
       <recent name="$PROJECT_DIR$/src/test/java" />

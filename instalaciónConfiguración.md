@@ -12,7 +12,7 @@ Siempre es recomendable utilizar las últimas versiones de dichas herramientas. 
 
 Vamos a utilizar JUnit como librería de testing y AssertJ para las validaciones. Ambas en su última versión.
 
-El archivo `pom.xml` de este directorio muestra la configuración necesaria para instalar y configurar estas librerías y JMeterDSL.
+El archivo [`pom.xml`](pom.xml) de este directorio muestra la configuración necesaria para instalar y configurar estas librerías y JMeterDSL.
 
 >*Tip: A efectos de este workshop vamos a crear un proyecto desde cero, pero si cuentas con un repositorio con el código de la aplicación o sistema que quieres probar es recomendable que integres JMeterDSL a ese repositorio.*
 

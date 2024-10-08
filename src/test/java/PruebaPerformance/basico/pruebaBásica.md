@@ -4,7 +4,7 @@ Vamos a crear una prueba que ejecute un pedido al sitio [PetStore](https://petst
 
 Además agregaremos un criterio de pass/fail para validar si la ejecución del test cumple los criterios de aceptación requeridos.
 
-El script `PruebaPerformance.java` de este directorio muestra una posible solución para que tengan como referencia.
+El script [`PruebaPerformance.java`](./PruebaPerformance.java) de este directorio muestra una posible solución para que tengan como referencia.
 
 # Debugging
 

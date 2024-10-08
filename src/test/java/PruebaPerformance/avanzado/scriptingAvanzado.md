@@ -8,7 +8,7 @@ En esta sección vamos a ver algunos conceptos y funcionalidades un poco más co
 * Cómo agregar tiempos de espera.
 * Uso de datos externos desde un archivo CSV.
 
-El script `PruebaPerformance_scriptingAvanzado.java` contiene una solución de referencia sobre esta sección.
+El script [`ScriptingAvanzado.java`](./ScriptingAvanzado.java) contiene una solución de referencia sobre esta sección.
 
 ## Buenas Practicas
 
@@ -20,8 +20,9 @@ Vamos a ver ahora algunas buenas prácticas recomendadas para facilitar el manej
 * Buenas prácticas de Java (variables, modularización a nivel de código, etc.).
 * Variables y Propiedades de JMeter.
 * Autostop
+* jtlWriter
 
-El script `PruebaPerformance_buenasPracticas.java` contiene una posible solución de esta sección para tomar como referencia.
+El script [`BuenasPracticas.java`](./BuenasPracticas.java) contiene una posible solución de esta sección para tomar como referencia.
 
 # Configuración de escenarios y ejecución
 
@@ -32,9 +33,4 @@ Aparte de la creación del script es necesario entender como JMeterDSL nos ayuda
 * ShowTimeLine element
 * Escalado en la nube (runIn)
 
-# Reportes
-
-Para poder tener toda la información una vez se ejecuten las pruebas vamos a necesitar de alguna forma de reporte o guardar los resultados. Para esto algunos metodos pueden ser:
-
-* jtlWriter
-* htmlReporter
+El script [`ModeladoYNube.java`](./ModeladoYNube.java) contiene una posible solución de esta sección para tomar como referencia.
