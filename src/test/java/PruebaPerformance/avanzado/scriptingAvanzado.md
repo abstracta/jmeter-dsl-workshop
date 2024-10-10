@@ -10,7 +10,9 @@ En esta sección vamos a ver algunos conceptos y funcionalidades un poco más co
 
 El script [`ScriptingAvanzado.java`](./ScriptingAvanzado.java) contiene una solución de referencia sobre esta sección.
 
-## Buenas Practicas
+> *Nota: el archivo CSV utilizado para el ejemplo contiene datos de usuarios que no existen a propósito de forma tal de hacer fallar la assertion del script en ese paso.*
+
+## Buenas Prácticas
 
 Vamos a ver ahora algunas buenas prácticas recomendadas para facilitar el manejo y el entendimiento de los scripts de JMeterDSL, así como para optimizar su ejecución. En particular:
 
