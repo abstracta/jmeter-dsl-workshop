@@ -1,67 +1,71 @@
+package PruebaPerformance.avanzado;
+
 import org.apache.http.entity.ContentType;
 import org.junit.jupiter.api.Test;
+import us.abstracta.jmeter.javadsl.core.TestPlanStats;
 import us.abstracta.jmeter.javadsl.http.DslHttpSampler;
 import us.abstracta.jmeter.javadsl.octoperf.OctoPerfEngine;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.time.Duration;
+import java.util.concurrent.TimeoutException;
 
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static us.abstracta.jmeter.javadsl.JmeterDsl.*;
 import static us.abstracta.jmeter.javadsl.core.listeners.AutoStopListener.AutoStopCondition.errors;
 
 public class ModeladoYNube {
-    String host = "https://petstore.octoperf.com";
+    private String host = "https://petstore.octoperf.com";
 
     @Test
-    public void performanceTest() throws Exception{
-         testPlan(
+    public void pruebaPerformance() throws IOException, InterruptedException, TimeoutException {
+        TestPlanStats stats = testPlan(
                 httpDefaults().encoding(StandardCharsets.UTF_8),
                 csvDataSet(testResource("usuarios.csv")),
-                threadGroup().rampTo(10,Duration.ofSeconds(5))
-                        .children(pedido("prueba","Sign In")),
-                threadGroup(1,Duration.ofSeconds(10),
-                        transaction("Página principal y Login",
-                                pedido("prueba","Sign In"),
-                                pedidoPostLogin(),
+                //rpsThreadGroup().maxThreads().rampTo().holdFor()
+                threadGroup()
+                        .rampTo(10,Duration.ofSeconds(10))
+                        .holdFor(Duration.ofSeconds(60))
+                        .rampTo(20,Duration.ofSeconds(10))
+                        .holdFor(Duration.ofSeconds(60))
+                        .rampTo(0,Duration.ofSeconds(20))
+                        .children(
+                                transaction("Home page y Login",
+                                        pedidoGet(host,"Saltwater, Freshwater"),
+                                        login()),
                                 autoStop()
                                         .when(errors().total().greaterThanOrEqualTo(2l)),
-                                constantTimer(Duration.ofMillis(1500))
-                                ),
-                        transaction("Selección de mascota",
-                                pedido(host + "/actions/Catalog.action?viewCategory=&categoryId=${mascota}","Product ID")
-                                )
-                        ),
-                rpsThreadGroup().maxThreads(10).children(pedido("prueba","Sign In")),
-
-                resultsTreeVisualizer()
-                //jtlWriter(".","success.jtl"),
-                //jtlWriter(".","errors.jtl").withAllFields(),
-                //run() para ejecutar en local.
-                //showTimeLine() para visualizar el comportamiento de los diferentes threads.
-        ).runIn(new OctoPerfEngine(System.getenv("bzt_token"))
-                .projectName("PruebaPerformance_modeladoYNube")
-                .totalUsers(10)
+                                transaction("Selección de categoria",
+                                        pedidoGet(host+"/actions/Catalog.action?viewCategory=&categoryId=${categoryId}","Product"))
+                        )
+        //).showTimeline(); //Esto quedó comentado ya que no pueden estar ambos metodos
+        ).runIn(new OctoPerfEngine(System.getenv("octoperf_token"))
+                //Estas configuraciónes sobreescriben la configuración del thread especificado mas arriba
+                .projectName("ModeladoyNube")
+                .totalUsers(40)
                 .rampUpFor(Duration.ofMinutes(1))
-                .holdFor(Duration.ofMinutes(10)));
+                .holdFor((Duration.ofMinutes((10)))));
+        assertThat(stats.overall().sampleTimePercentile99()).isLessThan(Duration.ofMillis(10));
     }
 
-    DslHttpSampler pedido(String url, String assertion){
-        return httpSampler(url)
+    DslHttpSampler login(){
+        return httpSampler("https://petstore.octoperf.com/actions/Account.action")
+                .post("username=${usuario}&password=${password}&signon=Login&_sourcePage=BD_MhFDsQSGuPF45FJbPqTqoX2K9774cvzCEue_pFME8lfkMQ0ERqCOnL5-Qo0AJFjNa8KnMc6qEJ4l7_DXHMyU3Qxc5rUuyD_Sdg2djJ0U%3D&__fp=8ZuxvgGH1OoPNSnmV5Hy5PiZnlcpmgmtjFqewKDO9aBO4bRVeVnasaIY8Oz76u7C", ContentType.TEXT_PLAIN)
+                .header("header1","valor1")
                 .downloadEmbeddedResources()
                 .children(
-                        responseAssertion(assertion)
+                        constantTimer(Duration.ofMillis(1000)),
+                        regexExtractor("categoryId","categoryId=(.*?)\"")
+                                .defaultValue("NOT_FOUND"),
+                        responseAssertion().containsSubstrings("Sign Out")
                 );
     }
 
-    DslHttpSampler pedidoPostLogin(){
-        return httpSampler(host + "/actions/Account.action")
-                .post("username=${usuario}&password=${contraseña}&signon=Login&_sourcePage=qcR5hjqgK1HArN7zn1V_il-AIOFms14gyG-9ci38UCHIEO4y9EWeWvCBDFFSY47E_11eSVWVTv2NoOuzGc0rYImweudTj8j25xdnyyoXvJg%3D&__fp=4VRNOQwDuzOYs9OJDgXmI1b5-TFlnl5FB6PPbNyCFVEUDybZeKXgUz-d9detouAn",ContentType.APPLICATION_FORM_URLENCODED)
-                .header("accept-encoding","gzip, deflate, br, zstd")
-                .downloadEmbeddedResources()
+    DslHttpSampler pedidoGet(String url,String assertion){
+        return httpSampler(url)
                 .children(
-                        regexExtractor("mascota","Catalog.action\\?viewCategory=&amp;categoryId=(.*?)\""),
-                        responseAssertion("Sign Out")
+                        responseAssertion(assertion)
                 );
     }
 }

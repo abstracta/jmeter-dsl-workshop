@@ -1,4 +1,4 @@
-package PruebaPerformance_basico;
+package PruebaPerformance.basico;
 
 import org.junit.jupiter.api.Test;
 import us.abstracta.jmeter.javadsl.core.TestPlanStats;

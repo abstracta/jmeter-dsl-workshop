@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc31e1fd-a9bb-4fe1-b9ad-f893068b2cc8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PruebaPerformance/avanzado/BuenasPracticas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PruebaPerformance/avanzado/BuenasPracticas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PruebaPerformance/avanzado/ModeladoYNube.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PruebaPerformance/avanzado/ModeladoYNube.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PruebaPerformance/avanzado/ScriptingAvanzado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PruebaPerformance/avanzado/ScriptingAvanzado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PruebaPerformance/basico/PruebaPerformance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PruebaPerformance/basico/PruebaPerformance.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +35,9 @@
         <option name="workspaceImportEnabled" value="true" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
   </component>
   <component name="ProjectId" id="2n9uf4vCU1gqjJTkgxAUkLMVLa5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -60,7 +67,39 @@
       <recent name="$PROJECT_DIR$/src/test/java" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.ModeladoYNube.pruebaPerformance">
+    <configuration name="ModeladoYNube.pruebaPerformance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TallerJMeterDSLQSConf" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="PruebaPerformance.avanzado.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="PruebaPerformance.avanzado" />
+      <option name="MAIN_CLASS_NAME" value="PruebaPerformance.avanzado.ModeladoYNube" />
+      <option name="METHOD_NAME" value="pruebaPerformance" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PruebaPerformance.performanceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TallerJMeterDSLQSConf" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="PruebaPerformance.basico.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="PruebaPerformance.basico" />
+      <option name="MAIN_CLASS_NAME" value="PruebaPerformance.basico.PruebaPerformance" />
+      <option name="METHOD_NAME" value="performanceTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -72,6 +111,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ModeladoYNube.pruebaPerformance" />
+        <item itemvalue="JUnit.PruebaPerformance.performanceTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
