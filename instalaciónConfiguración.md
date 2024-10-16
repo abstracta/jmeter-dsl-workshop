@@ -16,3 +16,4 @@ El archivo [`pom.xml`](pom.xml) de este directorio muestra la configuración nec
 
 >*Tip: A efectos de este workshop vamos a crear un proyecto desde cero, pero si cuentas con un repositorio con el código de la aplicación o sistema que quieres probar es recomendable que integres JMeterDSL a ese repositorio.*
 
+Cuando termines de instalar y configurar JMeterDSL, continúa a la Sección 2: **[Scripting básico](./src/test/java/PruebaPerformance/basico/pruebaBásica.md)**.

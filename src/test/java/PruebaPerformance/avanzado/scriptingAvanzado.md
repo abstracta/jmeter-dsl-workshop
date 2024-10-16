@@ -10,18 +10,18 @@ En esta sección vamos a ver algunos conceptos y funcionalidades un poco más co
 
 El script [`ScriptingAvanzado.java`](./ScriptingAvanzado.java) contiene una solución de referencia sobre esta sección.
 
-> *Nota: el archivo CSV utilizado para el ejemplo contiene datos de usuarios que no existen a propósito de forma tal de hacer fallar la assertion del script en ese paso.*
+> *Nota: el archivo CSV utilizado para el ejemplo contiene datos de usuarios que no existen a propósito, de forma tal de hacer fallar la assertion del script en ese paso.*
 
 ## Buenas Prácticas
 
 Vamos a ver ahora algunas buenas prácticas recomendadas para facilitar el manejo y el entendimiento de los scripts de JMeterDSL, así como para optimizar su ejecución. En particular:
 
 * Incluir validaciones (assertions).
-* Transaction Controllers.
-* HTTP Request Defaults.
+* Uso de Transaction Controllers.
+* Uso de HTTP Request Defaults.
 * Buenas prácticas de Java (variables, modularización a nivel de código, etc.).
-* Variables y Propiedades de JMeter.
-* Autostop.
+* Uso de Variables y Propiedades de JMeter.
+* Uso de Autostop.
 * Uso del jtlWriter.
 
 El script [`BuenasPracticas.java`](./BuenasPracticas.java) contiene una posible solución de esta sección para tomar como referencia.
@@ -30,9 +30,11 @@ El script [`BuenasPracticas.java`](./BuenasPracticas.java) contiene una posible 
 
 En esta sección veremos algunas de las opciones que presenta JMeterDSL para configurar escenarios de carga y ejecutar. Entre otras cosas vamos a ver:
 
-* ThreadGroups, Ramps y Holds.
+* Uso de ThreadGroups, Ramps y Holds.
 * Configuración según RPS.
-* ShowTimeLine.
+* Método ShowTimeLine.
 * Escalado en la nube.
 
 El script [`ModeladoYNube.java`](./ModeladoYNube.java) contiene una posible solución de esta sección para tomar como referencia.
+
+Cuando hayas agregado al script las funcionalidades avanzadas, puedes continuar con la sección 4: **[Features adicionales](./src/test/java/PruebaPerformance/avanzado/featuresAdicionales.md)**.
