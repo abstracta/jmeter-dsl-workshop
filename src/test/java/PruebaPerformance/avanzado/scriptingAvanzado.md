@@ -37,4 +37,4 @@ En esta sección veremos algunas de las opciones que presenta JMeterDSL para con
 
 El script [`ModeladoYNube.java`](./ModeladoYNube.java) contiene una posible solución de esta sección para tomar como referencia.
 
-Cuando hayas agregado al script las funcionalidades avanzadas, puedes continuar con la sección 4: **[Features adicionales](./src/test/java/PruebaPerformance/avanzado/featuresAdicionales.md)**.
+Cuando hayas agregado al script las funcionalidades avanzadas, puedes continuar con la sección 4: **[Features adicionales](./featuresAdicionales.md)**.
