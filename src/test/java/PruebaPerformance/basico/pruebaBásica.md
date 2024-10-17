@@ -18,4 +18,4 @@ Al utilizar este método durante la ejecución del script, JMeterDSL muestra una
 
 Permite ver el mismo script que estamos desarrollando pero en la interfaz de usuario de JMeter. También podemos interactuar con el script desde dicha interfaz. Es útil sobre todo si ya se cuenta con experiencia automatizando en JMeter.
 
-Cuando obtengas el script básico, continúa a la Sección 3: **[Scripting avanzado](./src/test/java/PruebaPerformance/avanzado/scriptingAvanzado.md)**.
+Cuando obtengas el script básico, continúa a la Sección 3: **[Scripting avanzado](../avanzado/scriptingAvanzado.md)**.
