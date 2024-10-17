@@ -1,16 +1,27 @@
 package PruebaPerformance.avanzado;
 
-import org.apache.http.entity.ContentType;
-import org.junit.jupiter.api.Test;
-import us.abstracta.jmeter.javadsl.core.TestPlanStats;
-import us.abstracta.jmeter.javadsl.http.DslHttpSampler;
+import static us.abstracta.jmeter.javadsl.JmeterDsl.autoStop;
+import static us.abstracta.jmeter.javadsl.JmeterDsl.constantTimer;
+import static us.abstracta.jmeter.javadsl.JmeterDsl.csvDataSet;
+import static us.abstracta.jmeter.javadsl.JmeterDsl.httpDefaults;
+import static us.abstracta.jmeter.javadsl.JmeterDsl.httpSampler;
+import static us.abstracta.jmeter.javadsl.JmeterDsl.jtlWriter;
+import static us.abstracta.jmeter.javadsl.JmeterDsl.regexExtractor;
+import static us.abstracta.jmeter.javadsl.JmeterDsl.responseAssertion;
+import static us.abstracta.jmeter.javadsl.JmeterDsl.resultsTreeVisualizer;
+import static us.abstracta.jmeter.javadsl.JmeterDsl.testPlan;
+import static us.abstracta.jmeter.javadsl.JmeterDsl.testResource;
+import static us.abstracta.jmeter.javadsl.JmeterDsl.threadGroup;
+import static us.abstracta.jmeter.javadsl.JmeterDsl.transaction;
+import static us.abstracta.jmeter.javadsl.core.listeners.AutoStopListener.AutoStopCondition.errors;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.time.Duration;
-
-import static us.abstracta.jmeter.javadsl.JmeterDsl.*;
-import static us.abstracta.jmeter.javadsl.core.listeners.AutoStopListener.AutoStopCondition.errors;
+import org.apache.http.entity.ContentType;
+import org.junit.jupiter.api.Test;
+import us.abstracta.jmeter.javadsl.core.TestPlanStats;
+import us.abstracta.jmeter.javadsl.http.DslHttpSampler;
 
 public class BuenasPracticas {
     private String host = "https://petstore.octoperf.com";
@@ -22,7 +33,7 @@ public class BuenasPracticas {
                 csvDataSet(testResource("usuarios.csv")),
                 threadGroup(5,1,
                         transaction("Home page y Login",
-                                pedidoGet(host,"Saltwater, Freshwater"),
+                            pedidoGet(host, "Saltwater, Freshwater"),
                                 login()),
                                 autoStop()
                                     .when(errors().total().greaterThanOrEqualTo(2l)),
