@@ -6,9 +6,9 @@ Además vamos a usar IntelliJ como IDE. Utilizar un IDE tiene varias ventajas, p
 
 Siempre es recomendable utilizar las últimas versiones de dichas herramientas. Para las soluciones propuestas utilizamos: 
 
-* Java 11+
-* Maven 3.9
-* (Opcional) IDE. Ej: IntelliJ IDEA 2022.31 (Community Edition)
+* Java 19+
+* Maven 3.9+
+* (Recomendado) IDE. Ej: IntelliJ IDEA 2022.31 (Community Edition)
 
 Vamos a utilizar JUnit como librería de testing y AssertJ para las validaciones. Ambas en su última versión.
 

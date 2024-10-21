@@ -1,47 +1,43 @@
 package PruebaPerformance.avanzado;
 
-import static us.abstracta.jmeter.javadsl.JmeterDsl.constantTimer;
-import static us.abstracta.jmeter.javadsl.JmeterDsl.csvDataSet;
-import static us.abstracta.jmeter.javadsl.JmeterDsl.httpSampler;
-import static us.abstracta.jmeter.javadsl.JmeterDsl.regexExtractor;
-import static us.abstracta.jmeter.javadsl.JmeterDsl.resultsTreeVisualizer;
-import static us.abstracta.jmeter.javadsl.JmeterDsl.testPlan;
-import static us.abstracta.jmeter.javadsl.JmeterDsl.testResource;
-import static us.abstracta.jmeter.javadsl.JmeterDsl.threadGroup;
-
-import java.io.IOException;
-import java.time.Duration;
 import org.apache.http.entity.ContentType;
 import org.junit.jupiter.api.Test;
 import us.abstracta.jmeter.javadsl.core.TestPlanStats;
 
+import java.io.IOException;
+import java.time.Duration;
+
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static us.abstracta.jmeter.javadsl.JmeterDsl.*;
+
 public class ScriptingAvanzado {
 
   @Test
-  public void pruebaPerformance() throws IOException {
+  public void performanceTest() throws IOException {
     TestPlanStats stats = testPlan(
-        csvDataSet(testResource("usuarios.csv")),
-        threadGroup(5, 1,
-            httpSampler("https://petstore.octoperf.com"),
-            httpSampler("https://petstore.octoperf.com/actions/Account.action")
-                .post(
-                    "username=${usuario}&password=${password}&signon=Login&_sourcePage"
-                        + "=BD_MhFDsQSGuPF45FJbPqTqoX2K9774cvzCEue_pFME8lfkMQ0ERqCOnL5"
-                        + "-Qo0AJFjNa8KnMc6qEJ4l7_DXHMyU3Qxc5rUuyD_Sdg2djJ0U%3D&__fp"
-                        + "=8ZuxvgGH1OoPNSnmV5Hy5PiZnlcpmgmtjFqewKDO9aBO4bRVeVnasaIY8Oz76u7C",
-                    ContentType.TEXT_PLAIN)
-                .header("header1", "valor1")
+        threadGroup(1, 1,
+            csvDataSet(testResource("usuarios.csv")),
+            httpSampler("https://petstore.octoperf.com/actions/Catalog.action"),
+            httpSampler("https://petstore.octoperf.com/actions/Account.action?signonForm=")
+                .children(
+                    regexExtractor("_sourcePage", "name=\"_sourcePage\" value=\"(.*?)\""),
+                    regexExtractor("__fp", "name=\"__fp\" value=\"(.*?)\"")
+                ),
+            httpSampler("https://petstore.octoperf.com/actions/Account.action").post("username=${usuario}"
+                    + "&password=${password}"
+                    + "&signon=Login"
+                    + "&_sourcePage=${_sourcePage}"
+                    + "&__fp=${__fp}",
+                ContentType.APPLICATION_FORM_URLENCODED)
+                .header("accept-encoding","gzip,deflate, br, zstd")
                 .downloadEmbeddedResources()
                 .children(
-                    constantTimer(Duration.ofMillis(1000)),
-                    regexExtractor("categoryId", "categoryId=(.*?)\"")
-                        .defaultValue("NOT_FOUND")
-                ),
-            httpSampler(
-                "https://petstore.octoperf.com/actions/Catalog"
-                    + ".action?viewCategory=&categoryId=${categoryId}")
-        ),
-        resultsTreeVisualizer()
-    ).run();
+                    constantTimer(Duration.ofSeconds(1))
+                )
+
+        )
+        //,resultsTreeVisualizer()
+    ).run(); //showInGui() para ver la prueba mediante la interfaz grafica de JMeter
+    assertThat(stats.overall().sampleTimePercentile99()).isLessThan(Duration.ofMillis(10));
   }
 }
