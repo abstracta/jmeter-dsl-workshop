@@ -17,30 +17,10 @@ public class PetStoreTest {
 
   private WebDriver driver;
 
-  @RegisterExtension
-  public final JmeterDslSeleniumRecorder recorder = new JmeterDslSeleniumRecorder()
-      .basePageObject(BasePage.class)
-      .urlExcludes("(?i).*\\.(bmp|css|js|gif|ico|jpe?g|png|swf"
-          + "|woff|woff2)", ".+google.+")
-      .correlationRule("JSESSIONID",
-          "JSESSIONID=([\\d\\w]+)",
-          "jsessionid=([\\d\\w]+)")
-      .correlationRule("categoryId",
-          "categoryId=(\\w+)",
-          "categoryId=(\\w+)")
-      .correlationRule("productId",
-          "productId=([\\w\\d-]+)",
-          "productId=([\\w\\d-]+)")
-      .correlationRule("workingItemId",
-          "workingItemId=([\\d\\w-]+)",
-          "workingItemId=([\\d\\w-]+)");;
-
   @BeforeEach
   public void setup() {
     var options = new ChromeOptions();
-    //options.addArguments("--headless=new");
     options.setImplicitWaitTimeout(TestConfig.getImplicitTimeout());
-    options.setProxy(recorder.getProxy());
     options.setAcceptInsecureCerts(true);
     driver = new ChromeDriver(options);
   }
