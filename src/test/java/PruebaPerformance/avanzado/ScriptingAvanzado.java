@@ -24,7 +24,7 @@ public class ScriptingAvanzado {
                     regexExtractor("__fp", "name=\"__fp\" value=\"(.*?)\"")
                 ),
             httpSampler("https://petstore.octoperf.com/actions/Account.action").post("username=${usuario}"
-                    + "&password=${password}"
+                    + "&password=${contraseña}"
                     + "&signon=Login"
                     + "&_sourcePage=${_sourcePage}"
                     + "&__fp=${__fp}",
@@ -34,7 +34,6 @@ public class ScriptingAvanzado {
                 .children(
                     constantTimer(Duration.ofSeconds(1))
                 )
-
         )
         //,resultsTreeVisualizer()
     ).run(); //showInGui() para ver la prueba mediante la interfaz grafica de JMeter

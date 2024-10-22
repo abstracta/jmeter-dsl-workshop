@@ -37,7 +37,6 @@ public class BuenasPracticas {
         ),
         jtlWriter("./","Resultados"),
         jtlWriter("./","Errores").withAllFields().logOnly(SampleStatus.ERROR)
-
         //,resultsTreeVisualizer()
     ).run();
     assertThat(stats.overall().sampleTimePercentile99()).isLessThan(Duration.ofMillis(10));
@@ -58,7 +57,7 @@ public class BuenasPracticas {
 
   private static DslHttpSampler login() {
     return httpSampler(url + "/actions/Account.action").post(
-            "username=${usuario}&password=${password}&signon=Login&_sourcePage${_sourcePage"
+            "username=${usuario}&password=${contraseña}&signon=Login&_sourcePage${_sourcePage"
                 + "}=&__fp"
                 + "=${__fp}",
             ContentType.APPLICATION_FORM_URLENCODED)

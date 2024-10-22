@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id="$MODULE_DIR$/pom.xml" external.system.module.type="SINGLE_MODULE" external.system.module.version="223-2" org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_11">
+<module external.system.module.type="SINGLE_MODULE" org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_19">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
@@ -100,8 +100,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: io.github.x-stream:mxparser:1.2.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: xmlpull:xmlpull:1.1.3.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: com.github.ben-manes.caffeine:caffeine:2.9.3" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.checkerframework:checker-qual:3.19.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: com.google.errorprone:error_prone_annotations:2.10.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.apache.commons:commons-lang3:3.12.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.apache.commons:commons-text:1.9" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.jodd:jodd-lagarto:5.0.13" level="project" />
@@ -176,5 +174,61 @@
     <orderEntry type="library" scope="TEST" name="Maven: us.abstracta.jmeter:jmeter-java-dsl-dashboard:1.29" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: kg.apc:jmeter-plugins-graphs-basic:2.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: kg.apc:jmeter-plugins-graphs-additional:2.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.seleniumhq.selenium:selenium-java:4.23.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.seleniumhq.selenium:selenium-chrome-driver:4.23.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.seleniumhq.selenium:selenium-chromium-driver:4.23.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.seleniumhq.selenium:selenium-manager:4.23.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.seleniumhq.selenium:selenium-devtools-v125:4.23.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.seleniumhq.selenium:selenium-devtools-v126:4.23.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.seleniumhq.selenium:selenium-devtools-v127:4.23.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.seleniumhq.selenium:selenium-devtools-v85:4.23.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.seleniumhq.selenium:selenium-edge-driver:4.23.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.seleniumhq.selenium:selenium-firefox-driver:4.23.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.seleniumhq.selenium:selenium-http:4.23.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: dev.failsafe:failsafe:3.3.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.seleniumhq.selenium:selenium-ie-driver:4.23.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.seleniumhq.selenium:selenium-remote-driver:4.23.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.opentelemetry.semconv:opentelemetry-semconv:1.25.0-alpha" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.opentelemetry:opentelemetry-api:1.40.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.opentelemetry:opentelemetry-context:1.40.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.opentelemetry:opentelemetry-exporter-logging:1.40.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.opentelemetry:opentelemetry-sdk-common:1.40.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.opentelemetry:opentelemetry-sdk-extension-autoconfigure-spi:1.40.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.opentelemetry:opentelemetry-sdk-extension-autoconfigure:1.40.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.opentelemetry:opentelemetry-api-incubator:1.40.0-alpha" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.opentelemetry:opentelemetry-sdk-trace:1.40.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.opentelemetry:opentelemetry-sdk:1.40.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.opentelemetry:opentelemetry-sdk-metrics:1.40.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.opentelemetry:opentelemetry-sdk-logs:1.40.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.seleniumhq.selenium:selenium-os:4.23.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.apache.commons:commons-exec:1.4.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.seleniumhq.selenium:selenium-safari-driver:4.23.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.seleniumhq.selenium:selenium-api:4.23.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.seleniumhq.selenium:selenium-support:4.23.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.google.auto.service:auto-service-annotations:1.1.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.google.guava:guava:33.2.1-jre" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.google.guava:failureaccess:1.0.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.google.code.findbugs:jsr305:3.0.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.checkerframework:checker-qual:3.42.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.google.errorprone:error_prone_annotations:2.26.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.google.j2objc:j2objc-annotations:3.0.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.seleniumhq.selenium:selenium-json:4.23.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: us.abstracta:selenium-jmeter-dsl:0.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: us.abstracta.jmeter:jmeter-java-dsl-recorder:1.23.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.micrometer:micrometer-registry-influx:1.11.3" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.micrometer:micrometer-core:1.11.3" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.micrometer:micrometer-commons:1.11.3" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.micrometer:micrometer-observation:1.11.3" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.hdrhistogram:HdrHistogram:2.1.12" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.latencyutils:LatencyUtils:2.0.3" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-launcher:1.10.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.blazemeter:jmeter-bzm-correlation-recorder:1.2.3" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.xmlunit:xmlunit-matchers:2.2.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.xmlunit:xmlunit-core:2.2.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.xmlunit:xmlunit-legacy:2.6.3" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: junit:junit:3.8.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.json:json:20190722" level="project" />
   </component>
 </module>
